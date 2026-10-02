@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZionCore Matrix</title>
+<meta name="description" content="A self-mending healing tree. Three locks as bark, a wave you choose to send.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#030605;--surface:#0b120d;--fg:#d7f5c8;--muted:#86a484;--primary:#3dff7a;--amber:#e2b15a;--line:#1c3324}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--fg)}body{font:16px/1.5 "IBM Plex Mono",ui-monospace,monospace;min-height:100vh}button,input{font:inherit;color:inherit}button{cursor:pointer}main{width:min(64rem,calc(100% - 1.5rem));margin:0 auto;padding:1.25rem 0 3rem}.eyebrow{margin:0;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-size:.75rem}h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:clamp(2.4rem,6vw,3.6rem);margin:.2rem 0 0;line-height:.95}.lede{color:var(--muted);max-width:40rem}.grid{display:grid;gap:.8rem;margin-top:1rem}@media(min-width:900px){.grid{grid-template-columns:1.2fr .8fr}}canvas{width:100%;height:22rem;border:1px solid var(--line);background:#030605;display:block}.meters{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-top:.5rem}.meter,.card,.codex{border:1px solid var(--line);background:var(--surface);padding:.7rem .8rem}.meter span{display:block;color:var(--muted);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase}.meter strong{font-family:"Instrument Serif",Georgia,serif;font-size:1.8rem;font-weight:400}form{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem;align-items:end}label{flex:1 1 16rem;color:var(--muted);font-size:.75rem}input{display:block;width:100%;margin-top:.3rem;min-height:2.75rem;padding:0 .7rem;border:1px solid var(--line);background:var(--bg)}input:focus{outline:1px solid var(--primary)}button.send{min-height:2.75rem;padding:0 1rem;border:1px solid var(--primary);background:transparent;color:var(--primary);letter-spacing:.14em;text-transform:uppercase;font-size:.75rem}.kicker{color:var(--amber);letter-spacing:.14em;text-transform:uppercase;font-size:.68rem;margin:0}.side{max-height:36rem;overflow:auto;display:grid;gap:.5rem;align-content:start}.card p,.note,.codex li{color:var(--muted);font-size:.78rem}.card h3{margin:.2rem 0;font-size:.95rem;font-weight:500}ul{margin:.4rem 0 0;padding:0;list-style:none}.codex li{margin:.45rem 0}.codex b{color:var(--primary);font-weight:500}.leaf{border-left:2px solid var(--primary);padding-left:.5rem;margin:.3rem 0}.note{margin-top:.6rem}
+</style>
+</head>
+<body>
+<main>
+<p class="eyebrow">Living tree · healing wave</p>
+<h1>ZionCore Matrix</h1>
+<p class="lede">A healing tree, not a mind cage. Entanglement, topology, and the observer are bark. The tree mends itself in this browser. The nation wave is a picture and a wish. It does not enter another mind, and it does not move a country.</p>
+<div class="grid">
+<section>
+<canvas id="field" width="800" height="480" aria-label="Living healing tree"></canvas>
+<div class="meters">
+<div class="meter"><span>Growth</span><strong id="m-growth">0</strong></div>
+<div class="meter"><span>Health</span><strong id="m-health">0</strong></div>
+<div class="meter"><span>Waves</span><strong id="m-waves">0</strong></div>
+</div>
+<form id="wave-form">
+<label>Leaf to carry (optional)
+<input id="leaf" maxlength="140" placeholder="A healing you choose to remember">
+</label>
+<button class="send" type="submit">Send wave</button>
+</form>
+<p class="note">While this page is open the tree creeps and mends. A long absence wilts it; coming back heals it. Fractal, topological, mnemonic.</p>
+<ul id="leaves"></ul>
+</section>
+<aside class="side" id="side"></aside>
+</div>
+</main>
+<script src="tree.js"></script>
+</body>
+</html>
